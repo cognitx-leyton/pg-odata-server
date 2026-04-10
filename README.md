@@ -1,6 +1,23 @@
-# Odata Postgres Example
+# PostgreSQL OData V4 Server
 
-Odata PostgreSQL Server example.
+> A PostgreSQL-backed OData V4 server built on [ts-odata-v4-server](https://github.com/cognitx-leyton/ts-odata-v4-server).
+
+![Stars](https://img.shields.io/github/stars/cognitx-leyton/pg-odata-server?style=flat-square) ![TypeScript](https://img.shields.io/badge/typescript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Node.js](https://img.shields.io/badge/node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+
+## Table of Contents
+
+- [Technical Details](#technical-details-of-this-example)
+  - [Database Setup](#setting-up-the-database)
+  - [Connection Setup](#setting-up-the-connection)
+  - [App Port](#setting-up-app-connection-port)
+  - [Building](#building-the-application)
+  - [Starting](#starting-the-application)
+  - [Sample Data](#creating-sample-data)
+  - [Adding Models](#adding-new-modelscontrollers)
+- [Example Server](#example-server)
+- [Response Example](#response-example)
+
+---
 
 ## Technical details of this example
 
@@ -14,7 +31,7 @@ CREATE DATABASE db_name;
 
 ### Setting up the connection
 
-You may customize the db connection options by editing [.env](http://gitlab.leyton.fr/salesforce/ODATA/-/blob/server/.env#L4-L8).
+You may customize the db connection options by editing `.env`.
 
 By default, these are the options:
 
@@ -65,7 +82,7 @@ After starting the application you can generate the sample data by submitting lo
 
 ### Adding new models/controllers
 
-You can create and expose new tables through Odata protocole using the instructions given on [ts-odata-v4-server](https://github.com/leyton-group/ts-odata-v4-server) project readme.
+You can create and expose new tables through Odata protocole using the instructions given on [ts-odata-v4-server](https://github.com/cognitx-leyton/ts-odata-v4-server) project readme.
 
 ## Example server
 
@@ -187,3 +204,9 @@ Server.create("/odata", port).addListener("listening", () => {
   ]
 }
 ```
+
+---
+
+<p align="center">
+  <sub>Built with care by <a href="https://cognitx.leyton.com/">Leyton CognitX</a></sub>
+</p>
